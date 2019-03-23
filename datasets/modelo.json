@@ -1,0 +1,28 @@
+//Author
+{
+    "_id": "string",
+    "name": "string",
+    "country": "string",
+    "date_birth": "date",
+    "awards": [
+      "string"
+    ]
+}
+
+//Publishers
+{
+    "_id": "string",
+    "p_name": "string",
+    "date_founded": "date",
+    "country": "string"
+}
+
+//Books
+{
+    "_id": "string",
+    "title": "string",
+    "author": "id_author",
+    "publisher": "id_publisher",
+    "date_published": "date",
+    "num_pages": "integer"
+}

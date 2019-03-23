@@ -1,0 +1,11 @@
+--//Debemos pasar los archivos al contenedor del router //--
+sudo docker cp dataset_authors.json mongo-router:/dataset_authors.json
+sudo docker cp dataset_publishers.json mongo-router:/dataset_publishers.json
+sudo docker cp dataset_books.json mongo-router:/dataset_books.json
+
+sudo docker exec -it mongo-router bash
+
+--//Importar los datos a las colecciones correspondientes //--
+mongoimport --db prac2 --collection authors --file dataset_authors.json --jsonArray
+mongoimport --db prac2 --collection publishers --file dataset_publishers.json --jsonArray
+mongoimport --db prac2 --collection books --file dataset_books.json --jsonArray
